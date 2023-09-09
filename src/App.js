@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const [firstVisit, setFirstVisit] = useState(true); // State to track first visit
+
+  useEffect(() => {
+    // Check if it's the first visit, and set the message accordingly
+    if (firstVisit) {
+      setError('Please write the city name');
+    }
+  }, [firstVisit]);
 
   async function weatherfoo() {
     try {
@@ -17,6 +25,7 @@ function App() {
 
       const data = await response.json();
       setWeatherData(data);
+      setFirstVisit(false); // Set firstVisit to false after the first search
     } catch (error) {
       console.error('Error fetching weather data:', error);
       setError('City not found or API error');

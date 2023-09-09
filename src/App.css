@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .bodyofweatherappliction {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -17,6 +21,7 @@
 }
 
 .inputdiv {
+    margin-top: 15px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -53,6 +58,7 @@
 .displayweatherdiv {
     padding: 20px 10px;
     color: white;
+    word-wrap: break-word;
     width: 80vw;
     box-shadow: 1px 1px 15px rgba(00, 0, 0, 50%);
     display: flex;
@@ -71,9 +77,13 @@
 }
 
 .messageofweather {
+    word-wrap: break-word;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
     font-weight: normal;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 5px;
     filter: drop-shadow(1px 1px 15px rgba(00, 0, 0, 50%));
 }
 
@@ -85,6 +95,8 @@
 
 .temperature {
     font-size: 100px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .weekdiv {
@@ -107,4 +119,10 @@ ul li {
 
 ul li span {
     margin-top: 10px;
+}
+
+@media (max-width: 420px) {
+    .temperature{
+        font-size: 50px;
+    }
 }
