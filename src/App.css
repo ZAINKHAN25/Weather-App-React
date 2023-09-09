@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bodyofweatherappliction {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff url("./Images/My\ Website\ Image.avif") no-repeat center;
+    background-size: cover;
+}
+
+.inputdiv {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.inputofweather {
+    width: 50%;
+    margin-right: 5%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 15px rgba(00, 0, 0, 50%);
+}
+
+.searchbtn {
+    border: 3px solid #013332;
+    padding: 8px 15px;
+    background: transparent;
+    border-radius: 8px;
+    color: #013332;
+    font-weight: bold;
+    transition: all .3s;
+    box-shadow: 1px 1px 15px rgba(00, 0, 0, 50%);
+}
+
+.searchbtn:hover {
+    color: white;
+    background-color: #013332;
+}
+
+.displayweatherdiv {
+    padding: 20px 10px;
+    color: white;
+    width: 80vw;
+    box-shadow: 1px 1px 15px rgba(00, 0, 0, 50%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.todayweather {
+    height: 50vh;
+    background: #ffffff url("./Images/My\ Website\ Image.avif") no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.messageofweather {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    filter: drop-shadow(1px 1px 15px rgba(00, 0, 0, 50%));
+}
+
+.cityname {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    margin: 3% auto 5% auto;
+}
+
+.temperature {
+    font-size: 100px;
+}
+
+.weekdiv {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh 5vw;
+    flex-wrap: wrap;
+    background-color: rgb(1, 51, 50);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 30px;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+
+ul li span {
+    margin-top: 10px;
+}
